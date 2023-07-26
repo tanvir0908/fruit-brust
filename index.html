@@ -54,6 +54,16 @@
         background-size: contain;
         height: 85vh;
       }
+      @media screen and (max-width: 640px) {
+        .nav-hide {
+          display: none;
+        }
+      }
+      @media screen and (min-width: 641px) {
+        .nav-icon {
+          display: none;
+        }
+      }
     </style>
     <!-- Website Title -->
     <title>Fruit Brust</title>
@@ -61,11 +71,11 @@
   <body>
     <header>
       <!-- Navbar -->
-      <section class="mx-32 py-5">
+      <section class="lg:mx-32 py-5">
         <nav
-          class="flex justify-between items-center rounded-full bg-fruit-color py-4 px-10"
+          class="flex justify-between items-center rounded-full lg:bg-fruit-color py-4 px-10"
         >
-          <div>
+          <div class="nav-hide">
             <ul class="flex gap-5 text-base font-medium text-white">
               <li><a href="">Home</a></li>
               <li><a href="">About Us</a></li>
@@ -74,20 +84,25 @@
             </ul>
           </div>
           <div class="flex items-center gap-3 mr-8">
-            <img class="w-10" src="./images/logo.png" alt="" />
-            <h2 class="text-3xl text-white font-bold">Fruit Burst</h2>
+            <img class="w-8 lg:w-10" src="./images/logo.png" alt="" />
+            <h2
+              class="text-xl lg:text-3xl text-[#121212] lg:text-white font-bold"
+            >
+              Fruit Burst
+            </h2>
           </div>
-          <div class="bg-white py-2 px-8 rounded-full">
+          <div class="bg-white py-2 px-8 rounded-full nav-hide">
             <input class="" type="text" placeholder="Search here" />
             <i class="fa-solid fa-magnifying-glass"></i>
           </div>
+          <i class="nav-icon fa-solid fa-bars"></i>
         </nav>
       </section>
       <!-- Banner Section -->
-      <section class="mx-32 pt-3 pb-5">
-        <div class="carousel w-full rounded-lg">
+      <section class="ml-5 lg:mx-32 pt-3 pb-5">
+        <div class="carousel w-screen lg:w-full rounded-lg h-72 lg:h-auto">
           <!-- Banner 1 -->
-          <div id="slide1" class="carousel-item relative w-full">
+          <div id="slide1" class="carousel-item relative w-screen lg:w-full">
             <div
               class="hero"
               style="background-image: url(./images/banner1.png)"
@@ -95,7 +110,7 @@
               <div class="hero-overlay bg-opacity-25"></div>
               <div class="hero-content text-center text-neutral-content">
                 <div class="max-w-md">
-                  <h1 class="mb-5 text-5xl font-bold text-white">
+                  <h1 class="mb-5 text-3xl lg:text-5xl font-bold text-white">
                     Exotic tastes at your doorstep
                   </h1>
                   <p class="mb-5 text-white">
@@ -204,7 +219,7 @@
     <main>
       <!-- Deal Section -->
       <section class="mx-32 py-5 mt-10">
-        <div class="flex justify-between items-center">
+        <div class="flex flex-col lg:flex-row justify-between items-center">
           <div>
             <h2 class="text-4xl font-bold mb-5">Deal of the day</h2>
             <p class="w-2/3 light-gray">
